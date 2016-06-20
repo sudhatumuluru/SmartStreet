@@ -1,0 +1,191 @@
+Traceback (most recent call last):
+  File "/home/pi/pi/flask/webservice.py", line 120, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 694, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 656, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 550, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 464, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "/home/pi/pi/flask/webservice.py", line 120, in <module>
+    app.run(host='0.0.0.0')
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 694, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 656, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 550, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 464, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+socket connect failed
+socket connect failed
+socket connect failed
+192.168.1.1 - - [03/May/2016 19:43:51] "GET /smarttree/api/v1.0/light/off HTTP/1.1" 500 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+socket connect failed
+socket connect failed
+socket connect failed
+socket connect failed
+24.4.62.202 - - [03/May/2016 22:16:06] "GET /smarttree/api/v1.0/light/red HTTP/1.1" 500 -
+socket connect failed
+socket connect failed
+socket connect failed
+24.4.62.202 - - [03/May/2016 22:16:11] "GET /smarttree/api/v1.0/light/all HTTP/1.1" 500 -
+24.4.62.202 - - [03/May/2016 22:16:24] "GET /smarttree/api/v1.0/light/weather HTTP/1.1" 500 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 251, in handle_one_request
+    return self.run_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/pi/flask/webservice.py", line 89, in control_light
+    concurrency = lib.check_ip_control(request.remote_addr)
+  File "/home/pi/pi/flask/webservice_lib.py", line 52, in check_ip_control
+    sys.exit(1)
+SystemExit: 1
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 251, in handle_one_request
+    return self.run_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/pi/flask/webservice.py", line 89, in control_light
+    concurrency = lib.check_ip_control(request.remote_addr)
+  File "/home/pi/pi/flask/webservice_lib.py", line 52, in check_ip_control
+    sys.exit(1)
+SystemExit: 1
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 251, in handle_one_request
+    return self.run_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/pi/flask/webservice.py", line 89, in control_light
+    concurrency = lib.check_ip_control(request.remote_addr)
+  File "/home/pi/pi/flask/webservice_lib.py", line 52, in check_ip_control
+    sys.exit(1)
+SystemExit: 1
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 251, in handle_one_request
+    return self.run_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/pi/flask/webservice.py", line 89, in control_light
+    concurrency = lib.check_ip_control(request.remote_addr)
+  File "/home/pi/pi/flask/webservice_lib.py", line 52, in check_ip_control
+    sys.exit(1)
+SystemExit: 1
+192.168.1.245 - - [04/May/2016 17:03:26] "GET /smarttreet/api/v1.0/ HTTP/1.1" 404 -
+192.168.1.245 - - [04/May/2016 17:03:29] "GET /favicon.ico HTTP/1.1" 404 -
